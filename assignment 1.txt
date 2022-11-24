@@ -1,0 +1,42 @@
+Assignment no.1
+
+Ans 1. :- 
+
+* = expression
+'hello'= values
+-87.8 = values 
+- = expression
+/ = expression
++ = expression
+6 = values
+
+Ans 2. :-
+
+A variable is a store of information , and a string is a type of information you would store in a variable. A string is usually words, While variable can be of various types like integer,floating,boolean etc.
+
+Ans 3. :-
+
+A data type  is a classification that specifies which type of value a variable has and what type.
+
+Three different types of data types are as follows:- 
+(a) Integer:- Numeric data type for numbers without fractions	eg. 34,-80.
+(b) Floating point :- Numeric data type for numbers with fractions	eg. 8.5,8.22222
+(c) Boolean (bool) :- True or false values 0(false ) and 1 (true ).
+
+Ans 4 :-
+An expression is a combination of operators and operands that is interpreted to produce some other value. In any programming language, an expression is evaluated as per the precedence of its operators.The expression in Python produces some value or result after being interpreted by the Python interpreter
+
+Ans 5 :-
+An expression usually refers to a piece of code that can be evaluated to a value, and is composed of variables, operators, function calls, and literals.
+a statement refers to a piece of code that executes a specific instruction or tells the computer to complete a task.
+
+Ans 6:- 23
+
+Ans 7:- (i) spamspamspam
+       (ii) spamspamspam 
+Ans 8 :- because as per rule variable name should start with character not integer. 
+
+Ans 9. :- int(),float(),str().
+
+Ans 10 :- because it can concatenate string type not integer type.
+
