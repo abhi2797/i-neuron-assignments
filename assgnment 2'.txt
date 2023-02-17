@@ -1,0 +1,124 @@
+Assignment 2 
+
+Ans 1. The Boolean data type has two possible values: True and False. In Python, we can write them exactly as shown, with the first letter capitalized: True and False. These values are used to represent logical truth values in programming, and they are often used in conditional statements and loops to control program flow.
+
+Ans 2. The three different types of Boolean operators are:
+
+ 1. AND operator - It returns true only if both operands are true and false otherwise. Represent by 'and' symbol. 
+ 2. OR operator - It returns true if atleast one operands is true and false otherwise. Represent by 'or' symbol.  
+ 3. NOT operator - This operator takes a single boolean operands and returns  the opposite boolean value. For eg. if the operand value is true then NOT operator will return false. Represent by 'not' symbol.
+
+Ans 3. The truth tables for the three boolean opertors are as follows:
+
+  'AND' operator:
+ 
+ operand 1   operand 2    result 
+ True          True        True
+ True          False      False 
+ False         True       False
+ False         False      False 
+
+ 'OR' operator : 
+ 
+ operand 1   operand 2    result 
+  
+  True         True       True
+  True         False      True
+  False        True       True
+  False        False      False
+
+  'NOT' operator :
+
+  operand  result 
+
+  True       False
+  False      True
+
+Ans 4. The values of given expressions is :
+
+ (a). (5>4)and (3==5)
+  which is  (True) 'and' (False ) = False 
+  (b). not(5>4)
+  which is 'not'(True) = false 
+ (c) . ((5>4) or (3==5))
+  which is ((true ) or (false)) = True
+  (d) not ((5>4) or (3==5))
+   In this statement first part of the expression is 'true'
+   and the second part of the expression is 'false '. 
+   since the two parts of the expression are connected by the "or" operator  the expression result in 'True' while the outer "not" operator negates this result, overall resulting in "false" .
+  (e) (true and true ) and ( True == False )
+   which is (True) 'and' (false) = false.
+   (f) (not false) or (not true)
+   which is (True)'or' (false) = True.
+
+ Ans 5. The six comparison operators are :
+
+  1. Greater than ('>')
+  2. Less than ('<') 
+  3. Greater than or equal to ('>=')
+  4. less than or equal to ('<=')
+  5. Equal to ('==')
+  6. not Equal to ('!=')
+
+ Ans 6. The equal to opertor('==') and assignment opertor ('=') are two different opertors with different functions and syntax.
+
+ The equal to operator is used to compare two values for equality.When we use this operator it checks whether the two values on both side of the opertor are equal or not, and returns (true) or (false ).
+ While the assignment opertor is used to assign a value to a variable. 
+
+ for eg . 
+  x = 10 
+  y = 5 
+
+  if x==y:
+       print("x and y are equal ")
+  else:
+       print("x and y are not equal")
+
+Ans 7. In a given code , there are three blocks that correspond to the 'if' statements. The blocks can be identified by looking at the indentation of the code. In python, blocks of code are defined by their indentation level. 
+  
+   Block 1 : if spam== 10:
+
+                 print('eggs')
+   Block 2 : if spam > 5:
+                  print('bacon')
+              else:
+                  print('ham')
+   Block 3 :
+             print('spam')
+             print('spam')
+Ans 8. 
+
+ spam = 3
+
+if spam == 1:
+    print("Hello")
+elif spam == 2:
+    print("Howdy")
+else:
+    print("Greetings!")
+
+Ans 9. Ctrl + c 
+
+Ans 10. 'break' and 'continue ' are two different keywords used in loops in python.
+break :- is used to immediately terminate the loop and exit it's block.
+continue:- is used to skip the current iteration of the loop and on to the next one.
+
+Ans 11. 'range(10)' , 'range(0,10)' and 'range(0,10,1)' all create the same sequence of numbers, and will result in the same behaviour in  a 'for' loop. The only difference is in the way that the arguments are specified. 
+
+Ans 12. Using for loop :
+ for i in range(1,11):
+     print(i)
+ 
+ Using while loop :
+i = 1 
+while i <=10:
+    print (i)
+    i +=1
+
+Ans 13. if we have a function named 'bacon()' inside a module named 'spam', you can call it after importing 'spam ' by using dot notation.
+for eg. 
+import spam
+
+spam.bacon()
+
+
