@@ -1,0 +1,58 @@
+Ans 1. It can be advantious for many reason :-
+ (a) Reusability : functions allow us to reuse code multiple times.
+ (b) Modularity :- using function gives us ability to break down a large program into small parts.
+ (c) Abstraction :- it allows us to hide complex implementation details behind a simple interface.
+ (d) Encapsulation :- we can encapsulate related data and operations within a single module.
+ (e) Testing 
+
+Ans 2. The code in a function runs when the function is called, not when it is specified.
+
+Ans 3. In python 'def' statement is used to create function 
+   for eg. :-
+
+    def add_numbers(x, y):
+    """Adds two numbers"""
+    result = x + y
+    return result
+Ans 4. A function is a named block of code that performs a specific task and can be  reused multiple times throughout a program. A function call, on the other hand, is a statement that executes the code within the function at a particular point in the program.
+
+Ans 5. The global scope is the top-level scope in a Python program, and it contains any variables, functions, or classes that are defined outside of any functions or classes while Local scopes, on the other hand, are created when a function or class is defined. Each time a function or class is called, a new local scope is created for that specific instance of the function or class. 
+
+Ans 6. When a function call returns, the variables that were defined within the local scope of that function are destroyed and their values are no longer accessible. This means that any variables, functions, or classes defined within a function are only accessible within that local scope, and are destroyed when the function call returns.
+
+Ans 7.  a return value is the data that a function or method produces and sends back to the calling code, once it has completed its execution.Regarding your second question, yes, it is possible to have a return value in an expression. An expression is a combination of operators, variables, and literals that evaluates to a value. When a function call is used within an expression, the return value of the function can be used as a part of the expression.
+
+Ans 8. If a function does not have a return statement, the return value of a call to that function is undefined or unpredictable, and it depends on the programming language and the implementation of the compiler or interpreter.
+
+Ans 9. We can make a function variable refer to the global variable by using the global keyword to declare the variable inside the function.
+
+For example, in Python, we can declare a global variable x and a function my_func() that modifies the value of x. 
+  x = 5
+
+def my_func():
+    global x
+    x = 10
+
+my_func()
+print(x)  # prints 10
+
+Ans 10.  'None' is a built-in constant object that represents the absence of a value or the lack of a meaningful result. It is often used as a placeholder value or a default return value for functions that do not have a meaningful result.
+None is also a falsy value, which means that it evaluates to False in a Boolean context. However, it is not the same as False, which is a boolean value.
+
+Ans 11. The sentence "import areallyourpetsnamederic" is not a meaningful or valid Python statement, and it would raise a ModuleNotFoundError exception if executed in a Python environment. 
+
+Ans 12. If we imported a Python module called spam that contained a function called bacon(), we could call the bacon() function by prefixing it with the module name using the dot notation, like this:- 
+  import spam
+
+spam.bacon()
+
+In this example, the import statement imports the spam module, and the spam.bacon() statement calls the bacon() function defined inside the spam module.
+
+Ans 13. When a program encounters an error, it may crash or terminate abruptly, which can be frustrating for the user and can cause data loss or other problems. However, there are several things you can do to prevent your program from crashing and handle errors gracefully:- 
+ (1) By using exception handling 
+ (2) validate user input 
+ (3) check for null or undefined values 
+ (4) use defensive programming techniques 
+ (5) log errors and exception 
+
+Ans 14. The try and except clauses are used for exception handling in Python. The purpose of the try clause is to enclose a block of code that may raise an exception during execution. The code inside the try block is executed normally, and if an exception occurs, it is caught and handled by the except block.
