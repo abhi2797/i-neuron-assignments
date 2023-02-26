@@ -1,0 +1,85 @@
+Ans 1. It is a symbol used to represent an empty list. A list is a data structure that can hold multiple items such as number, strings or other objects.
+
+Ans 2. To assign the value of 'hello' as the third value in a list of values stored in a variable called 'spam' we can use indexing like :
+  spam[2]= 'hello'
+ As we know indexing starts at 0 so to store at third value we have to give index of 2. 
+
+ Ans 3. it will give 'spam[3]' if we assume from previous question that 'spam' still contain the list '['a','b','c','d']'
+ then it would evaluate to the string 'd'. 
+
+ Ans 4.  Negative indexing is used to access the elements from the end of a list,where -1 refers to the last element, and so on. 
+  assuming that 'spam' still contains the list  '['a','b','c','d']' then the value of 'spam[-1]' is 'd'.
+
+ Ans 5. spam[:2] would refer to the slice '['a','b']'. this slice includes all element from the beginning of the list (index0) up to (but not including ) the element at index 2. 
+
+ Ans6 .The value of bacon.index('cat') is 1 which is the index of the first occurrence of the string 'cat' in the list.
+
+ Ans 7 .it will add the integer 99 value at the last of 'bacon' list. 
+ The new value of the 'bacon' list will be [3.14,'cat',11,'cat',true,99]
+
+ Ans 8. if we call bacon.remove('cat') it will remove first occurence of 'cat' so list will be look like this 
+ [3.14,11,'cat',true].
+
+ Ans 9. the list concatenation operator has the symbol '+' which is used to concatenate two lists 
+  for eg. 
+   list1=[1,2,3]
+   list2=[4,5,6]
+   new_list=list1+list2
+   print(new_list)
+ which will give output =[1,2,3,4,5,6]
+
+while if we use replication operator '*' which is used to replicate a list a certain of times. 
+for eg. 
+ list1= [1,2,3]
+ replicate_list= list1*3
+ print(replicate_list)
+ whose output :- [1,2,3,1,2,3,1,2,3]
+
+Ans 10. Both append() and insert() methods are used to add elements to a list, but they differ in where the new element is added.
+  The 'append()' method adds an element to the end of a list, while the 'insert()' method inserts an element at a specific index in the list. 
+
+Ans 11.(a).By using remove() method 
+for eg: 
+list1 = ['jack','sunil','manish']
+list1.remove('sunil')
+print(list1) 
+#output: ['jack','manish']
+ 
+  (b). By using pop() method 
+   for eg.  
+   list1= ['jack','sunil','manish']
+   new_list = list1.pop(1)
+   print(list1) 
+   #output: ['jack','manish']
+Ans 12. a. both lists and strings are ordered sequences of elements.list contain any type of objects,while strings contain characters.
+ b. both lists and strings can be accessed using index notation.
+ c. both list and strings can be concatenated using the '+' operator
+ d. Both lists and strings can be iterated over using 'for' loop to access each element in turn.
+
+ Ans  13. The main differences b/w tuples and lists are:
+  (1). Mutability : tuples are immutable, which means their elements cannot be changed once they are created.Lists,on the other hand, are mutable,which means you can add,remove or change element.
+  (2). Syntax : tuples are defined using parantheses () while lists are defined using square brackets [].
+  (3) Performance: tuples are more performant than lists, because the take up less memory and can be accessed faster.
+  (4). Use cases: tuples are often used for data that should not be chgned once it created, such that databases records etc. 
+Ans 14.  To create a tuple value that only contains the integer 42 , we can use:
+ my_tuple=(42,)
+  *Note the comma after the integer 42. This is because in Python, a tuple with only one element must have a trailing comma to distinguish it from a regular integer in parentheses. This is because parentheses are used for grouping in Python, and a single integer in parentheses is just a grouping of that integer.
+Ans 15. to get a list vlaue's tuple form , we can simply use the 'tuple()'
+fxn and pass the list as an argument 
+for eg. 
+my_list = [1, 2, 3, 4]
+my_tuple = tuple(my_list)
+print(my_tuple)
+#output : (1,2,3,4)
+
+while to get tuple value's list form we can use the 'list()' fxn and the tuple as an argument 
+for eg. 
+my_tuple = (1, 2, 3, 4)
+my_list = list(my_tuple)
+print(my_list)
+#output : [1,2,3,4]
+
+Ans 17. copy.copy() and copy.deepcopy() are both methods from 'copy' module that allow you to create a copy of an object in memory.
+
+copy.copy() :creates a sallow copy of an object. This means that the to-level obejct is copied, but any nested objects are not.
+copy.deepcopy() : creates a deep copy of an object. This means that both the top level object and all nested objects are copied recursively to create a complete independent copy. 
