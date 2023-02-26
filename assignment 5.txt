@@ -1,0 +1,41 @@
+Ans 1. an empty dictionary in python looks like this :
+ my_dict={}
+
+Ans 2. the value of a dictionary with the key 'foo'  and value '42' represented as 
+ my_dict={'foo':42}
+
+this will creates a dictionary named 'my_dict' with a single key-value pair where the key is 'foo' and the value is '42 '.
+
+ans 3. In list we can access each element by its position,orindex in the list.
+
+while In a dictionary each item is stored as a key-value pair,where the key is a unique identifier for the value.
+
+ans4. if we try to access 'spam['foo']' where 'spam' is {'bar':100} , a key error will generated. This is because 'spam' does not have a key named 'foo' and attempting to access a non-existent key in a dictionary using square bracket notation will result in a key error. 
+
+Ans5. if a dictionary is stored in 'spam' there is no difference b/w the expressions 'cat' in spam and 'cat' in spam.keys() both expressions check if the string 'cat' is a key in the 'sapm' dictionary.
+
+Ans6. Yes, there is difference between the expressions 'cat' in spam and 'cat'  in spam.values()
+
+'cat' in spam will check if the string 'cat' is a key in the 'spam'.
+while 'cat' in spam vlaues() will checks if the string 'cat' is a value in the spam dictionary 
+ for eg .
+ spam = {'cat': 1, 'dog': 2, 'bird': 3}
+
+# Check if 'cat' is a key in the dictionary
+if 'cat' in spam:
+    print('Found cat as a key!')
+
+# Check if 1 is a value in the dictionary
+if 1 in spam.values():
+    print('Found 1 as a value!')
+
+This code would print 'Found cat as a key!' because 'cat' is a key in the spam dictionary, and 'Found 1 as a value!' because 1 is a value in the spam dictionary.
+
+Ans 7 . by using spam.setdefault('color','black')
+
+Ans 8. by using module 'pprint'
+for eg. 
+ import pprint
+ spam = {'cat':1,'dog':2,'bird':3}
+ pprint.pprint(spam)
+ 
