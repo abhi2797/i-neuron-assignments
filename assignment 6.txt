@@ -1,0 +1,54 @@
+Ans 1. Escape characters are special characters that are used to represent other character or sequences of characters that are used to represent other characters or sequences of characters that cannot be represented directly in a strig or character litereal. 
+
+escape characters are denoted by a backslash("") followed by a specific character 
+Some commonly used escape characters include:
+
+\n: represents a newline character
+\t: represents a tab character
+": represents a double quote character
+': represents a single quote character
+
+Ans2. "\n" stand for newline while "\t" stand for tab.
+
+Ans3. To include a backslash character in a string, we can use the backslash escape character ("\"). The backslash escape character is used to represent the backslash character itself in a string.
+
+for eg : if we want to include a backslash character in a string we can use the backslash escape character like this :
+print("C:\\Windows\\System32") 
+ #will prints "C:\Windows\System32"
+
+Ans 4. Because in string "howl's moving castle" the single quote character is included withing the string,but it is not causing any problem because the string is defined using double quotes.
+However, if the string were defined using single quotes like 'howls' moving catle' the singoe quote character withing the string would need to be escaped using a backslash.
+
+Ans5.  If we don't want to use the "\n" character to represent newlines in a string, we can use string concatenation to concatenate multiple strings.
+
+Ans 6. The values of the given expressions are as follows:
+1. 'Hello,worlds!'[1]:- it will give second character in the string 'e'.
+2. 'hello,world!'[0:5]:- it will give hello,
+3. 'hello,world!'[:5] :- it will give hello, 
+4. 'hello,world!'[3:] :- it will give 
+lo,world!
+
+Ans7 . here are the values of the given expressions :
+1. 'Hello'.upper() :- 'HELLO' upper method is used to uppercase the string.
+
+2. 'Hello'.upper().isupper(): 'HELLO'  the upper method will uppercase the string while isupper method will check if string is uppercase or not.
+
+3.'Hello'.upper().lower() :  'HEllO'
+
+Ans 8. 'Remember,remember,the fifth of july'.split() the value of this expression is a list of strings '['Remember,', 'remember,','the'
+, 'fifth', 'of','july.']'. The split() method is called on the string which splits into separate substrings.
+ 
+ '-'join('There can be only one.'.split()) : split method will separate this string into ['There','can','be','only','one.']
+ the join() method is then called '-' this method will joins the list elements into string.
+ 'There-can-be-only-one.'
+
+ Ans 9. 'ljust(width,filchar)' : this method left-justifies 
+
+'rjust(width,fillchar'):- this method right-justifies.
+
+'center(width,fillchar)' :- this method centers a string.
+
+ans10.  we can use the 'strip()' method to remove whitespace characters from the start and end of a string.
+
+ 
+
