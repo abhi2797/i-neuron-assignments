@@ -1,0 +1,49 @@
+Ans 1. assert spam >= 0, "spam should be a non-negative integer"
+ To assert statement checks that the value of 'spam' is greater than or equal to 0. If 'spam' is neg, the assertin will fail and an assertionerror will be raised"spam should be a non-negative integer".
+
+ Ans 2. assert eggs.lower() != bacon.lower(), "eggs and bacon should have different values"
+
+This assert statement first call the 'lower()' method on both eggs and bacon which wil convert their string values to lowercase. And then it will checks if the lowercase versions of the strings are not equal using operator. If it's found equal then it will generate message 'eggs and bacon should have different values'.
+
+Ans 3. assert False, "This assertion always fails"
+
+this statement checks if the expression 'False' is true, which is always false. Therefore, the assertion will always fail and an assertionerror will be raised with the message 
+"This assertion always fails ".
+
+Ans 4. import logging
+       logging.basicConfig(level=logging.DEBUG)
+
+ Once these two lines are present in your software, you can call the logging.debug() function to output debug messages. 
+
+Ans 5. To have the 'logging.debug()' function  send a logging message to a file named 'programLog.txt' , we need to include the following two lines of code that is :
+ 
+  impor logging 
+  logging.basicConfig(filename='program.txt',level=logging.DEBUG)
+
+ Ans 6. The five levels of logging in logging module in increasing order are:-
+ 1. DEBUG :- detailed information, typically of intreset only when diagnosing problems.
+ 2. INFO:- confirmation that things are working as expected.
+ 3. WARNING :- an indication that something unexpected or problamatic has happened.
+ 4. ERROR :- due to a more serious problem, the software has not been able to perform some function.
+ 5. CRITICAL :- a very serious error
+
+ Ans 7 . logging.disable(logging.CRITICAL)
+  this line of code sets the logging level to 'CRITICAL' , which means that all log messages with a severity level of 'CRITICAL'. 
+
+ Ans 8.  The logging package has a lot of useful features:
+  1 easy to see where and when a logging call is being made from 
+  2. you can log to files, sockets, pretty much anything all at the same time.
+  3. you can differentiate your logging based on severity.
+
+  print doesn't have any of these 
+
+Ans9.the Step Over button executes the current line and moves to the next line, the Step In button moves inside a function and executes each line of code, and the Step Out button finishes executing a function and returns to the calling function. These buttons are useful for navigating through the code and identifying errors during debugging.
+
+Ans 10. After clicking the "continue "
+button in a debugger, the debugger will continue executing the code until it encounters a breakpoint or a run time error occurs.
+
+Ans 11. A breakpoint is a point in the code where the debugger is programmed to pause execution, allowing the developer to inspect the state of the program and debug any issues. If a breakpoint is encountered after clicking "continue", the debugger will pause execution at the breakpoint and allow the developer to inspect the program. 
+
+
+
+

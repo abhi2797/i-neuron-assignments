@@ -1,0 +1,127 @@
+Ans1. When using the 'PdfFileReader()' and 'PdfFileWriter()' classes from the PyPDF2 library to read from or write to a PDF file , you should open the file object in the binary mode.
+
+For eg to open a pdf file for reading  we can use. 
+with open('example.pdf', 'rb') as pdf_file:
+    pdf_reader = PdfFileReader(pdf_file)
+
+And to open a file for writing , we can use :
+ 
+ with open('output.pdf', 'wb') as output_file:
+    pdf_writer = PdfFileWriter()
+    pdf_writer.write(output_file)
+
+Ans 2. We can use the 'getPage()' method of the 'PdfFileReader' to get a 'Page' object for page 5 from a 'PdfFileReader'.
+for eg : 
+with open('example.pdf', 'rb') as pdf_file:
+    pdf_reader = PdfFileReader(pdf_file)
+    page_five = pdf_reader.getPage(4) # 0-based index, so page 5 is at index 4
+Ans 3. The 'PdfFileReader' object has a 'numPages' attribute that stores the number of pages in the PDF document.
+ For Eg: 
+  with open('example.pdf','rb') as pdf_file:
+        pdf_reader = PdfFileReader(pdf_file)
+        num_pages= pdf_reader.numPages
+        print(f'The PDF file has {num_pages}pages')
+Ans 4. If PDF is ecrypted with the password 'swordfish', then we must provide the password to the 'PdfFileReader()' constructor before we obtain 'page' object from it.
+
+ For eg. 
+ with open('example.pdf','rb') as pdf_file:
+     pdf_reader = PdfFileReader(pdf_file)
+     if pdf_reader.isEncrypted:
+          pdf_reader.decrypt('swordfish')
+     num_pages = pdf_reader.numPages
+     page_one = pdf_reader.getPage(0)
+
+Ans 5 . To rotate a page in a PDF file using the PyPDF2 library, we can use the 'rotateClockwise()' and 'rotateCounterClockwise()' methods for the 'Page ' object.
+ 
+for eg: 
+ with open('example.pdf', 'rb') as pdf_file:
+    pdf_reader = PdfFileReader(pdf_file)
+    page_one = pdf_reader.getPage(0)
+    page_one.rotateClockwise(90)
+    with open('output.pdf', 'wb') as output_file:
+        pdf_writer = PdfFileWriter()
+        pdf_writer.addPage(page_one)
+        pdf_writer.write(output_file)
+
+Ans 6. A 'paragraph' object represents a single paragraph of text in the word document. It can contain multiple 'Run' objects, and it has its own formatting properties such as alignment, spacing , and indentation.
+
+ while The 'Run' object represents a contigous run of text within a pragraph that has a singleset of character fromattig properties, such as font family, size, color and style.
+
+ Note : A 'Paragraph' object can contain multiple 'Run' objects that have different  formatting properties.
+
+For eg. from docx import Document
+from docx.shared import Inches
+
+document = Document()
+paragraph = document.add_paragraph('This is a paragraph of text.')
+run = paragraph.add_run('This is a run of text within the paragraph.')
+
+
+Ans 7. The specific method for obtaining a  list of 'Paragraph' objects may vary depending on the programming language and library you are using . 
+here is an example using python using 'python-d0cx' library .:-
+
+import docx
+#load the document into document object 
+doc = docx.Document('path to your document.docx')
+# get a list of pragraph objects
+
+paragraphs = doc.paragrpahs
+
+#print the text of each paragraph 
+for paragraph in paragraphs:
+    print(paragraph.text)
+
+Ans 8.  The variable 'bold' 'underline' 'italic' ' strike' and 'outline' are typically attributes of text run object in a document processing library.
+
+A text run represents a contigous run of text in a document with the same formatting properties, sucj as font size, color, or style. 
+
+For eg. in 'python-docx' library for working with microsoft word documents the 'Run' object represents a text run and has attributes such 'bold' ,'italic' 'underline' and 'strike'.
+
+Ans 9. 'False' : When the 'bold' attribute is set to 'False', it means that the text run or protion of text is not formatted as bold. This value indicates that the text is in the regular, non-bold style.
+
+ 'True' : When the 'bold' attribute is set to 'True', it means that the text run or portion of text is formatted as bold. this value indicates that the text is in the bold style. 
+
+ 'None' : When the 'bold' attribute is set to 'None' , it means that the text run or portion of text inherits the bold formatting from a parent style or formatting.
+
+ Ans 10. To create a new ' Document' object in a document processing library typically involves the following steps :-
+ 1. import the necessary library for working with word documents. 
+ 2. Create a new 'Document' object using the appropriate constructor or method provided by the library.
+ 3. add content to the new 'Document' object as desired.
+ 4. save the 'Document' object to a file.
+
+ For eg. using 'python-docx' library in python. 
+ 
+ import docx 
+ #create a new document object 
+ doc = docx.Document()
+ #add content to the document 
+ doc.add_paragraph("hello,world!")
+ #save the document to a file
+ doc.save('path/to/new/document.docx')
+
+ Ans 11. import docx
+
+# Load the document into a Document object
+doc = docx.Document('path/to/your/document.docx')
+
+# Add a new paragraph to the document
+doc.add_paragraph('Hello, there!')
+
+# Save the updated document to a file
+doc.save('path/to/your/document.docx')
+
+In this eg, we load an existing document from a file using the 'Document()' constructor, add a new paragraph to the document using the 'add_paragraph()' method, and save the updated document to file using the 'save()' method.
+
+Ans 12. In many document processing libraries and applications, the available levels of headings are represented by the int data type, and are commonly referred to as heading levels or heading styles. Here's how the heading levels are typically mapped to integers : -
+
+Heading level 1: 'int' value 1
+Heading level 2: 'int' value 2
+Heading level 3: 'int' value 3
+Heading level 4: 'int' value 4
+Heading level 5: 'int' value 5
+Heading level 6: 'int' value 6
+Heading level 7: 'int' value 7
+Heading level 8: 'int' value 8
+Heading level 9: 'int' value 9
+
+Where 1 represents the highest level of heading and 9 represents the lowest level of heading.
