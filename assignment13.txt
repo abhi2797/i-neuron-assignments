@@ -1,0 +1,62 @@
+Ans 1. Excel spreadsheets have several advantages over csv spreadsheets:
+ (a) Foramtting : excel allows for formatting options such as font styles, colors, borders, and cell alignment, which can make the data more readable and easier to understand.
+ (b) Calculations : Excel has built in formulas and functions that make it easy to perform calculations on data , such as summing up a column or calculating averages.
+ (c) charts and graphs :- it has a wide of chart and graph options
+ (d) data validation :- it provides tools for data validation which ensures that dat is entered correctly.
+ (e) sorting or filtering:- it allows us to filter and sort data based on different different criteria 
+ (f) multiple sheets:- it allows for multiple sheets within a single file.
+
+
+ while csv spreadsheets have simpler and more lighweight than excel spreadsheets, making them easier to use and more portable. They can be easily opened and edited with a text editor or spreadsheets software and can be used with wide range of programming languages and data analysis.
+
+ Ans 2. To create a reader object using the 'csv ' module in python, we need to pass a file object (or an iterable that returns strings ) to the csv.reader() function.
+
+For creating a writer object using the 'csv' module in python we need to pass a file object and optionally a dialect (such as excel or excel tab) to hte csv.writer() function.
+
+Ans3. To create a reader object, we need to open the file in 'r' mode, which stands for read only mode. This mode allows us to read the contents of the file, but not modify it.
+ For eg. :
+import csv
+
+# Open the CSV file in read-only mode
+with open('myfile.csv', 'r') as file:
+
+    # Create the reader object
+    reader = csv.reader(file)
+
+While for wirting object we need to open the file 'w' mode which stands for write mode. This mode allows us to write data to the file and overwriting its content.
+for eg: 
+import csv
+
+# Open the CSV file in write mode
+with open('myfile.csv', 'w', newline='') as file:
+
+    # Create the writer object
+    writer = csv.writer(file)
+
+Ans 4. The 'csv.writer.writerow()' methods takes a list as an argument and writes it as a single row to a csv file.
+For eg. :
+import csv
+
+# Open the CSV file in write mode
+with open('myfile.csv', 'w', newline='') as file:
+
+    # Create the writer object
+    writer = csv.writer(file)
+
+    # Write rows to the file
+    writer.writerow(['Name', 'Age', 'Gender'])
+    
+    # Write a list to the file as a row
+    row_data = ['John', '25', 'Male']
+    writer.writerow(row_data)
+
+In this example, the csv.writer() function is used to create a writer object for the file 'myfile.csv'. The writerow() method is then used to write two rows to the file: the first row contains the column headers, and the second row contains data in the form of a list.
+
+Ans 5 delimiter : the argument is used to specify the character that separates the fields in a csv file. The default value for the delimiter is a comma(","),but we can specify a different delimiter character by passing it as the 'delimiter' argument to the csv.writer()fucntion.
+
+Lineterminator: this argument is used to specify the character(s) used to terminate each row in a CSV file. the default value for the line terminator is a newline character (
+\n), but we can specify a different line terminator character by passing it as the 'lineterminator ' argument to the csv.writer()
+
+Ans 6 we can use the built-in json module in Python to convert a string of JSON data into a Python data structure. Specifically, we can use the json.loads() function, which takes a JSON string as its input and returns a Python data structure (typically a dictionary, list, or combination of the two) that corresponds to the JSON data.
+
+Ans 7. we can use the json.dumps() function from the built-in json module in Python to convert a Python data structure into a JSON-formatted string. The json.dumps() function takes a Python object as its input and returns a string that contains the JSON representation of the object.
