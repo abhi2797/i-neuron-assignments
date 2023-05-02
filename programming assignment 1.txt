@@ -1,0 +1,46 @@
+ans 1. print("Hello Python")
+
+ans2 . # define variables
+a = 10
+b = 5
+
+# addition
+c = a + b
+print("a + b =", c)
+
+# division
+d = a / b
+print("a / b =", d)
+
+Ans3 . # input base and height of the triangle
+base = float(input("Enter the base of the triangle: "))
+height = float(input("Enter the height of the triangle: "))
+
+# calculate the area
+area = 0.5 * base * height
+
+# display the result
+print("The area of the triangle is:", area)
+
+Ans 4. # input two variables
+a = input("Enter the first variable: ")
+b = input("Enter the second variable: ")
+
+# swap the variables
+temp = a
+a = b
+b = temp
+
+# display the swapped variables
+print("After swapping:")
+print("First variable is:", a)
+print("Second variable is:", b)
+
+Ans 5 
+import random
+
+# generate a random integer between 1 and 10
+random_num = random.randint(1, 10)
+
+# display the random number
+print("Random number:", random_num)
