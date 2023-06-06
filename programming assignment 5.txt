@@ -1,0 +1,89 @@
+ans 1. 
+def find_lcm(a,b):
+    # find max number
+    max_num = max(a, b)
+    # intializing lcm number
+    lcm = max_num
+    while True:
+        if lcm % a == 0 and lcm % b == 0:
+            break
+        lcm += max_num
+    return lcm
+
+
+num1 = int(input("enter value of a :"))
+num2 = int(input("enter value of b :"))
+
+lcm = find_lcm(num1,num2)
+# result
+print("the lcm of ", num1, "and", num2, "is :", lcm)
+
+ans 2 . def find_hcf(a,b):
+    #find min number
+    min_num = min(a,b)
+    #initialize hcf variable
+    hcf = 1
+    for i in range(1,min_num+1):
+        if a % i ==0 and b % i ==0:
+            hcf = i
+    return hcf
+#taking input 
+num1= int(input("enter value of a : "))
+num2 = int (input("enter value of b : "))
+#calling function
+hcf = find_hcf(num1, num2 )
+#result
+print("the hcf of ",num1,"and",num2,"is :",hcf)
+
+ans 3 .
+decimal = int(input("enter the value : "))
+
+binary=bin(decimal)
+octal = oct(decimal)
+hexadecimal = hex(decimal)
+
+print("Decimal:",decimal)
+print("binary:",binary)
+print("octal:",octal)
+print("Hexadecimal:",hexadecimal)
+
+ans 4 .
+character = input ("Enter the character:")
+
+ascii_value = ord(character)
+
+print("The ascii code for the",character, "is : ",ascii_value)
+
+
+ans 5 . 
+def add(a,b):
+    return a+b
+def sub(a,b):
+    return a-b
+def mul(a,b):
+    return a*b
+def div(a,b):
+    return a/b
+
+print("select your choice :")
+print("1. Addition")
+print("2. subtraction")
+print("3. Multiply")
+print("4. Divide")
+
+choice = int(input("Enter your number from 1-4"))
+num1 = float(input("Enter the number :"))
+num2= float(input("Enter the number : "))
+
+result = 0 
+if choice == 1:
+    result = add(num1 ,num2)
+elif choice == 2:
+    result= sub(num1 ,num2)
+elif choice ==3:
+    result = mul(num1 ,num2)
+elif choice ==4:
+    result = div(num1 ,num2)
+else: 
+    print("invalid choice ")
+print("the result is : ",result)

@@ -1,0 +1,92 @@
+ans 1 .
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+number = int(input("Enter a number: "))
+
+if number < 0:
+    print("Factorial is not defined for negative numbers.")
+elif number == 0:
+    print("Factorial of 0 is 1")
+else:
+    result = factorial(number)
+    print(f"The factorial of {number} is {result}")
+
+ans 2. 
+number = int(input("Enter a number: "))
+
+print(f"Multiplication Table for {number}:")
+
+for i in range(1, 11):
+    product = number * i
+    print(f"{number} x {i} = {product}")
+
+ans 3. def fibonacci(n):
+    sequence = []
+    if n <= 0:
+        return sequence
+    elif n == 1:
+        sequence.append(0)
+    elif n == 2:
+        sequence.extend([0, 1])
+    else:
+        sequence.extend([0, 1])
+        a, b = 0, 1
+        for _ in range(2, n):
+            c = a + b
+            sequence.append(c)
+            a, b = b, c
+    return sequence
+
+number = int(input("Enter the number of Fibonacci numbers to generate: "))
+
+fib_sequence = fibonacci(number)
+print("Fibonacci Sequence:")
+print(fib_sequence)
+
+ans 4 .
+def is_armstrong_number(number):
+    num_str = str(number)
+    num_digits = len(num_str)
+    sum_of_cubes = sum(int(digit) ** num_digits for digit in num_str)
+    return number == sum_of_cubes
+
+number = int(input("Enter a number: "))
+
+if is_armstrong_number(number):
+    print(f"{number} is an Armstrong number.")
+else:
+    print(f"{number} is not an Armstrong number.")
+ans 5.
+def is_armstrong_number(number):
+    num_str = str(number)
+    num_digits = len(num_str)
+    sum_of_cubes = sum(int(digit) ** num_digits for digit in num_str)
+    return number == sum_of_cubes
+
+lower = int(input("Enter the lower bound of the interval: "))
+upper = int(input("Enter the upper bound of the interval: "))
+
+armstrong_numbers = []
+
+for number in range(lower, upper + 1):
+    if is_armstrong_number(number):
+        armstrong_numbers.append(number)
+
+print("Armstrong numbers in the interval:")
+print(armstrong_numbers)
+
+ans 6. number = int(input("Enter a number: "))
+
+# Check if the number is positive
+if number < 0:
+    print("Please enter a positive number.")
+else:
+    # Calculate the sum of natural numbers
+    sum_of_numbers = (number * (number + 1)) // 2
+
+    # Print the result
+    print(f"The sum of natural numbers up to {number} is {sum_of_numbers}.")
