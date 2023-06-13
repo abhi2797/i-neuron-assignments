@@ -1,0 +1,92 @@
+ans 1 .
+import string
+def is_disarium(number):
+    #first we convert number to string
+    num_str=str(number)
+    #calculate sum
+    disarium_sum = sum(int(digit)** (index+1) for index, digit in enumerate (num_str))
+    if disarium_sum == number :
+        return True
+    else :
+        return False
+num = int(input("Enter the Number :"))
+if is_disarium(num):
+    print(f"{num} is disarium number ")
+else:
+    print(f"{num} is not disarium number ")
+
+ans 2. 
+
+def is_disarium(number):
+    #convert number to string
+    num_str= str(number)
+    #calculate sum
+    disarium_sum = sum(int(digit)**(index+1) for index, digit in enumerate(num_str))
+
+    if disarium_sum == number :
+        return True
+    else:
+        return False
+for num in range(1,100):
+    if is_disarium(num):
+        print(num)
+ans 3 . 
+def is_happy_number(number):
+    seen_number= set()
+    while number != 1:
+        current_sum=0
+        while number >0:
+            digit = number %10
+            current_sum += digit**2
+            number//=10
+        if current_sum in seen_number:
+            return  False
+        seen_number.add(current_sum)
+        number = current_sum
+    return True
+num = int(input("Enter the number :"))
+if is_happy_number(num):
+        print(f"{num} is Happy Number ")
+else :
+        print(f"{num} is not Happy Number ")
+ans 4 .
+def is_happy_number(number):
+    seen_number= set()
+    while number != 1:
+        current_sum=0
+        while number >0:
+            digit = number %10
+            current_sum += digit**2
+            number//=10
+        if current_sum in seen_number:
+            return  False
+        seen_number.add(current_sum)
+        number = current_sum
+    return True
+for num in range(1,100):
+    if is_happy_number(num):
+        print(f"{num} is Happy Number ")
+    else :
+        print(f"{num} is not Happy Number ")
+ans 5. 
+def is_harshad_number(number):
+    #calculate sum
+    digit_sum = sum(int(digit) for digit in str(number))
+    if number % digit_sum == 0:
+        return True
+    else :
+        return  False
+num = int(input("Enter Number :"))
+if is_harshad_number(num):
+    print(f"{num} is Harshad Number")
+else:
+    print(f"{num} is not harshad number ")
+
+ans 6. 
+def print_pronic_number():
+    for num in range(1,101):
+        for x in range(1,num):
+            if x * (x+1) == num:
+                print(num)
+                break
+print_pronic_number()

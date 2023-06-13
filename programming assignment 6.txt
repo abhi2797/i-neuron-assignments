@@ -1,0 +1,89 @@
+ans 1 .
+def fibonacci(n):
+    if n <=0:
+        print("Invalid number please enter positive number ")
+        return
+    elif n==1:
+        return 0
+    elif n ==2:
+        return 1
+    else :
+        return(fibonacci (n-1) + fibonacci (n-2))
+#taking user input
+num = int(input("Enter the number : "))
+#displaying fibonacci seq
+if num<=0:
+    print("Invalid Input. Input should be in Postive integer ")
+else :
+    print("fibonacci sequence ")
+    for i in range(1, num+1):
+        print(fibonacci(i),end = " ")
+
+ans 2 . 
+def factorial(n):
+    if n<0 :
+        print("Invalid Input ")
+        return
+    elif n==0 or n==1 :
+        return 1
+    else :
+        return n * factorial(n-1)
+#getting input
+num = int(input("Enter the number :"))
+#Displaying Factorial
+if num<0:
+    print("Invalid Input ! Input should be positive integer")
+else :
+    result = factorial(num)
+    print(f"factorial of {num} is : {result}")
+
+
+
+ans 3. 
+def cal_bmi(weight,height):
+    if weight <=0 or height<=0 :
+        print("Invalid Input !! ")
+        return None
+    else :
+        bmi = weight/(height**2)
+        return bmi
+#taking Input
+weight= float(input("Enter your weight in kilograms : "))
+height = float(input("Enter your height in meters :"))
+#calulating bmi
+bmi = cal_bmi(weight,height)
+
+#displaying result
+if bmi is not None :
+    print(f"The bmi is :  {bmi:.2f}")
+
+ans 4. 
+import math
+num = float(input("Enter the number : "))
+if num<= 0:
+    print("Invalid input !!! Please give positive number ")
+else :
+    result = math.log(num)
+    #displaying result
+    print(f"The log of {num} is : {result:.2f}")
+ans 5. 
+def cube_sum(n):
+    if n <= 0:
+        print("Invalid input. The input should be a positive integer.")
+        return
+    else:
+        sum_of_cubes = 0
+        for i in range(1, n+1):
+            sum_of_cubes += i**3
+        return sum_of_cubes
+
+# Get the value of n from the user
+n = int(input("Enter a positive integer: "))
+
+# Calculate the cube sum
+if n <= 0:
+    print("Number should be a positive integer.")
+else:
+    result = cube_sum(n)
+    print(f"The cube sum of the first {n} natural numbers is: {result}")
+
