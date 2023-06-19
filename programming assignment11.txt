@@ -1,0 +1,92 @@
+ans 1. 
+def find_word(text,k):
+    words =  text.split()
+    long_words = [word for word in words if len(word)>k]
+    return  long_words
+input_text = "hy my name is abhishek meena and i'm a student of ineuron "
+length_threshold = 5
+
+result = find_word(input_text,length_threshold)
+
+print(f"words longer than {length_threshold} characters : ",result)
+
+ans 2.
+def remove_character(string,i):
+    if i <0 or i>= len(string):
+        return  string
+    return  string[:i] + string[i+1:]
+input_string= "Hello ineuron!"
+index_to_remove = 5
+result = remove_character(input_string,index_to_remove)
+print("Result is :",result)
+
+ans 3 .
+def split_and_join(string,delimiter):
+    words = string.split(delimiter)
+    new_string =" ".join(words)
+
+    return new_string
+
+input_string = " hello,ineuron !! , This , is , Abhishek , meena"
+separator = " , "
+
+result = split_and_join(input_string,separator)
+print("Result is : ", result)
+
+
+ans 4. 
+def binary_string(string):
+    for char in string:
+        if char != '0' and char != '1' :
+            return False
+    return True
+input_string = str(input("String :"))
+result = binary_string(input_string)
+
+if result:
+    print("the string is binary :")
+else :
+    print("the string is not binary :")
+
+ans 5. 
+def remove_uncommon(string1,string2):
+    words1 = string1.split()
+    words2 = string2.split()
+
+    # creating set of unique words from each string
+    set1 = set(words1)
+    set2 = set(words2)
+    #finding uncommon word
+    uncommon_word = set1.symmetric_difference(set2)
+    return uncommon_word
+input1 = " hello , world"
+input2= " hello , inueron world"
+result = remove_uncommon(input1, input2)
+print("uncommon words : ",result)
+
+ans 6. 
+def find_duplicate(string):
+    char_count ={ }
+    for char in string:
+        char_count[char] = char_count.get(char,0)+1
+    duplicate_chars = [char for char , count in char_count.items() if count >1]
+    return  duplicate_chars
+input_string = "hello , ineuron "
+result = find_duplicate(input_string)
+
+print("Duplicate string is : ",result)
+
+ans 7 .
+import re
+def special_char(string):
+    pattern = r'[!@#$%^&*()_+=?><":;]'
+
+    match = re.search(pattern,string)
+
+    return  match is not None
+input_string ="Hello , world !@#$"
+result = special_char(input_string)
+if result:
+    print("the string contains special characters ")
+else :
+    print("The string didn't contains special characters ")

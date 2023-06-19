@@ -1,0 +1,130 @@
+ans 1. 
+def extract_unique(dictionary):
+    unique_values = set()
+
+    for values in dictionary.values():
+        if isinstance(values,list):
+            unique_values.update(values)
+        else :
+            unique_values.add(values)
+    return list(unique_values)
+my_list =  {
+    "key1" : [1,2,3,4],
+    "key2"  :[2,4,5],
+    "key 3" : 4,
+    "key 4" : 5,
+    "key 5" : [1,2,3]
+}
+unique_values = extract_unique(my_list)
+print(unique_values)
+
+ans 2. 
+def sum_all(dictionary):
+    total_sum = 0
+
+    for value in dictionary.values():
+        if isinstance(value,int)or isinstance(value,float):
+            total_sum += value
+    return total_sum
+my_dic = {
+    "key 1 " : 10,
+     "key 2" : 20,
+    "key 3 " : 30,
+    "key 4" : 40
+
+}
+
+total_sum =  sum_all(my_dic)
+print(total_sum)
+
+ans 3 . 
+def merge_two_dic(dict1, dict2):
+    merged_dict = dict1.copy()
+    merged_dict.update(dict2)
+    return merged_dict
+
+dict1 = {'a': 1 , 'b' : 2}
+dict2 = {'c': 3 , 'd' : 4 }
+
+merged = merge_two_dic(dict1,dict2)
+print(merged)
+
+ans 4.
+def convert_value(kv_list):
+    flat_dic = {}
+    for pair in kv_list:
+        if len(pair) == 2:
+            key,value = pair
+            flat_dic[key] =value
+    return flat_dic
+key_value = [ ("key 1" ,2), ("key 2",3) ,("key 3 ",4)]
+flat_dic = convert_value(key_value)
+print("flat dictionary :",flat_dic)
+
+ans 5. 
+from collections import OrderedDict
+def insert_beginning(od,key,value):
+    od[key] = value
+    od.move_to_end(key,last = False)
+
+od = OrderedDict()
+
+insert_beginning(od, 'apple',10)
+insert_beginning(od, 'banana', 20)
+insert_beginning(od,'orange',30)
+
+for key , value in od.items():
+    print(key,value)
+
+ans 6.
+
+from collections import OrderedDict
+
+def order_of_character(string,pattern):
+    char_order = OrderedDict.fromkeys(string)
+#initializing a pointer to keep  track of the current position in pattern
+    pointer = 0
+    for char in char_order:
+        if pointer == len(pattern):
+            break
+        if char == pattern[pointer]:
+            pointer +=1
+    return pointer == len(pattern)
+string = 'hello worlds '
+pattern = 'llo'
+
+result = order_of_character(string,pattern)
+
+if result:
+    print(f"the characters in {pattern} appear in order in the string {string}")
+else :
+    print(f"the characters in {pattern} do not appear in order in the string {string}")
+
+
+
+ans 7.
+from collections import OrderedDict
+
+def order_of_character(string,pattern):
+    char_order = OrderedDict.fromkeys(string)
+#initializing a pointer to keep  track of the current position in pattern
+    pointer = 0
+    for char in char_order:
+        if pointer == len(pattern):
+            break
+        if char == pattern[pointer]:
+            pointer +=1
+    return pointer == len(pattern)
+string = 'hello worlds '
+pattern = 'lo'
+
+result = order_of_character(string,pattern)
+
+if result:
+    print(f"the characters in {pattern} appear in order in the string {string}")
+else :
+    print(f"the characters in {pattern} do not appear in order in the string {string}")
+
+
+
+
